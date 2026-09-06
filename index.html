@@ -171,6 +171,14 @@
     font-size: 34px; font-weight: 700; margin: 20px 0 6px;
     letter-spacing: -0.5px; color: var(--ink);
   }
+  .nickname {
+    display: inline-block;
+    background: var(--wine); color: #fff;
+    padding: 5px 14px; border-radius: 999px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
   .name-line {
     font-size: 18px; color: var(--wine); margin-bottom: 12px;
     font-family: 'Playfair Display', Georgia, serif;
@@ -348,6 +356,105 @@
     color: var(--ink); font-size: 14px; line-height: 1.6;
   }
 
+  /* THE PITCH (60-second) */
+  .pitch-block {
+    margin: 0 24px 24px; padding: 32px 26px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+  .pitch-kicker {
+    font-size: 11px; letter-spacing: 2px; color: var(--gold);
+    font-weight: 700; text-align: center; margin-bottom: 20px;
+  }
+  .pitch-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+  .pitch-card { padding: 4px 0; }
+  .pitch-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px; color: var(--wine); font-weight: 700;
+    line-height: 1; margin-bottom: 8px; opacity: 0.5;
+  }
+  .pitch-label {
+    font-size: 11px; letter-spacing: 1.5px; color: var(--muted);
+    font-weight: 700; margin-bottom: 6px;
+  }
+  .pitch-body {
+    font-size: 14px; line-height: 1.55; color: var(--ink);
+  }
+
+  /* PAR CASE STUDIES */
+  .par-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 4px solid var(--wine);
+    border-radius: 14px; padding: 22px 24px; margin-bottom: 14px;
+  }
+  .par-badge {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 1.5px; color: var(--wine);
+    font-weight: 700; margin-bottom: 14px;
+    background: rgba(110,31,58,0.08);
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .par-line {
+    font-size: 14px; line-height: 1.65; color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .par-line:last-child { margin-bottom: 0; }
+  .par-tag {
+    display: inline-block; font-size: 10px; font-weight: 800;
+    letter-spacing: 1px; padding: 3px 8px; border-radius: 4px;
+    margin-right: 8px; color: #fff;
+    vertical-align: 1px;
+  }
+  .par-p { background: #8B4A5A; }
+  .par-a { background: var(--gold); }
+  .par-r { background: var(--wine); }
+
+  /* OFFER PACKAGES */
+  .offer-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .offer-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 20px;
+  }
+  .offer-icon { font-size: 26px; margin-bottom: 10px; }
+  .offer-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px; font-weight: 700; color: var(--wine);
+    margin-bottom: 8px;
+  }
+  .offer-desc {
+    font-size: 13px; line-height: 1.55; color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .offer-tag {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 1px; color: var(--gold);
+    font-weight: 700; text-transform: uppercase;
+  }
+
+  /* DIRECTION */
+  .direction-section {
+    margin: 20px 24px; padding: 32px 28px;
+    background: linear-gradient(135deg, rgba(110,31,58,0.05), rgba(184,147,74,0.08));
+    border-left: 4px solid var(--gold);
+    border-radius: 14px;
+  }
+  .direction-arrow {
+    font-size: 32px; color: var(--gold); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .direction-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px; color: var(--wine); font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .direction-body {
+    font-size: 14px; line-height: 1.65; color: var(--ink);
+  }
+
   /* FAQ */
   .faq-item {
     background: var(--card); padding: 20px 22px;
@@ -439,8 +546,9 @@
   @media (max-width: 500px) {
     .handle { font-size: 34px; }
     .headline-big { font-size: 52px; }
-    .brands-grid { grid-template-columns: 1fr; }
+    .brands-grid, .pitch-grid, .offer-grid { grid-template-columns: 1fr; }
     .posts-grid { grid-template-columns: 1fr 1fr; }
+    .pitch-block { padding: 24px 20px; }
   }
 </style>
 
@@ -451,7 +559,8 @@
   <div class="identity">
     <div class="avatar"></div>
     <h1 class="handle">@thefaizaglam</h1>
-    <div class="name-line">Faiza · Beauty Creator</div>
+    <div class="nickname">Nano followers. Micro-tier reach.</div>
+    <div class="name-line">Faiza · Modest Beauty Creator</div>
     <div class="location">
       <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
       Long Island, NY
@@ -460,6 +569,32 @@
       <span class="pill">MODEST BEAUTY</span>
       <span class="pill">HIJABI CREATOR</span>
       <span class="pill">SKINCARE</span>
+    </div>
+  </div>
+
+  <div class="pitch-block">
+    <div class="pitch-kicker">THE 60-SECOND PITCH</div>
+    <div class="pitch-grid">
+      <div class="pitch-card">
+        <div class="pitch-num">01</div>
+        <div class="pitch-label">Who I help</div>
+        <div class="pitch-body">Beauty, skincare, and modest-fashion brands who want distribution beyond their existing audience — a fresh viewer, not the same followers again.</div>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-num">02</div>
+        <div class="pitch-label">What I solve</div>
+        <div class="pitch-body">Standard nano creators deliver 5–20K views. Micro creators charge K+ per Reel. I fill the gap: 100K–500K views at nano-tier rates.</div>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-num">03</div>
+        <div class="pitch-label">Why believe me</div>
+        <div class="pitch-body">4.15M views in the last 30 days. 98% from non-followers via Instagram discovery. Estée Lauder × CXS partner.</div>
+      </div>
+      <div class="pitch-card">
+        <div class="pitch-num">04</div>
+        <div class="pitch-label">What changes for you</div>
+        <div class="pitch-body">Your product on a Reel that reaches 100K+ fresh viewers, in a modest-beauty context brands rarely access — priced like nano seeding.</div>
+      </div>
     </div>
   </div>
 
@@ -508,6 +643,37 @@ Faiza is an <strong>Estée Lauder Community × Seen (CXS)</strong> partner and h
       <div class="brand-card" style="background: var(--sand); border-style: dashed;">
         <div class="brand-name" style="color: var(--muted);">+ Your brand next</div>
         <div class="brand-note">OPEN FOR Q4 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subhead">Case Studies</div>
+  <div class="subhead-sub">Every claim carries a number.</div>
+  <div class="section" style="padding-top:0;">
+    <div class="par-card">
+      <div class="par-badge">CASE 01 · TOP REEL</div>
+      <div class="par-content">
+        <div class="par-line"><span class="par-tag par-p">PROBLEM</span> Modest beauty content for busy moms rarely fits into a real morning routine — most tutorials assume 30 minutes and two hands.</div>
+        <div class="par-line"><span class="par-tag par-a">ACTION</span> Filmed a single-take "get ready in 5 minutes" Reel, hijab-first, no cuts, exactly what she does when the toddler is loose.</div>
+        <div class="par-line"><span class="par-tag par-r">RESULT</span> <strong>6,100 interactions</strong>, pushed to non-followers by the discovery algorithm, saved and shared in family group chats.</div>
+      </div>
+    </div>
+
+    <div class="par-card">
+      <div class="par-badge">CASE 02 · SKINCARE DEMO</div>
+      <div class="par-content">
+        <div class="par-line"><span class="par-tag par-p">PROBLEM</span> Korean skincare brands need authentic hijabi-friendly demos — most tutorials assume the hairline is exposed, which excludes half the routine.</div>
+        <div class="par-line"><span class="par-tag par-a">ACTION</span> Filmed a full routine adapted for hijab, showing how each product actually gets applied under coverage.</div>
+        <div class="par-line"><span class="par-tag par-r">RESULT</span> <strong>1,700 interactions</strong> and inbound PR from two K-beauty brands (Dr. Ceuracle, ISNTREE) within the following week.</div>
+      </div>
+    </div>
+
+    <div class="par-card">
+      <div class="par-badge">CASE 03 · POV FORMAT</div>
+      <div class="par-content">
+        <div class="par-line"><span class="par-tag par-p">PROBLEM</span> Brand-safe content that still hooks the algorithm — most modest beauty videos read as either too niche or too generic.</div>
+        <div class="par-line"><span class="par-tag par-a">ACTION</span> Built a "POV: you have 5 mins to get ready" scripted format that puts the viewer inside the moment, product-agnostic and re-usable.</div>
+        <div class="par-line"><span class="par-tag par-r">RESULT</span> <strong>997 interactions</strong>, format now pinned as a template for future brand collaborations.</div>
       </div>
     </div>
   </div>
@@ -615,6 +781,49 @@ Faiza is an <strong>Estée Lauder Community × Seen (CXS)</strong> partner and h
     <div style="margin-top:14px; font-size:13px; color:var(--muted); text-align:center;">Top three reels · Last 30 days from Instagram Insights</div>
   </div>
 
+  <div class="subhead">What I Offer</div>
+  <div class="subhead-sub">Formats, not fixed rates — every brief is scoped to the goal.</div>
+  <div class="section" style="padding-top:0;">
+    <div class="offer-grid">
+      <div class="offer-card">
+        <div class="offer-icon">🎬</div>
+        <div class="offer-name">Single Reel</div>
+        <div class="offer-desc">One 15–60 second Reel — hooked for the discovery algorithm, on-brand, 5–7 day turnaround.</div>
+        <div class="offer-tag">Best for product launches</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">📱</div>
+        <div class="offer-name">Reel + Stories</div>
+        <div class="offer-desc">One Reel plus 3 tagged stories with the product link. Repeats the message across formats for 24-hour saturation.</div>
+        <div class="offer-tag">Highest ROI per dollar</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🔍</div>
+        <div class="offer-name">Product Review Deep-Dive</div>
+        <div class="offer-desc">Reel + carousel + story sequence. Honest before / after where the product earns it. 10–14 day turnaround.</div>
+        <div class="offer-tag">For hero SKUs and launches</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">📅</div>
+        <div class="offer-name">Monthly Retainer</div>
+        <div class="offer-desc">Three Reels per month, three-month minimum. Consistent category presence and repeated audience touchpoints.</div>
+        <div class="offer-tag">For share-of-voice plays</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🌐</div>
+        <div class="offer-name">Whitelisting Rights</div>
+        <div class="offer-desc">You boost her Reel as your own paid ad. Layered on any package above.</div>
+        <div class="offer-tag">Amplify what already works</div>
+      </div>
+      <div class="offer-card">
+        <div class="offer-icon">🤝</div>
+        <div class="offer-name">Something Custom</div>
+        <div class="offer-desc">Non-standard format, category exclusivity, revenue share, event coverage — start the conversation and we'll shape it together.</div>
+        <div class="offer-tag">Propose your own terms</div>
+      </div>
+    </div>
+  </div>
+
   <div class="subhead">Audience</div>
   <div class="section" style="padding-top:0;">
     <div class="demo-note">
@@ -649,6 +858,12 @@ Faiza is an <strong>Estée Lauder Community × Seen (CXS)</strong> partner and h
       <div class="faq-q">Where is she based?</div>
       <div class="faq-a">Long Island, New York, United States. Available for both remote and NYC-area collaborations.</div>
     </div>
+  </div>
+
+  <div class="direction-section">
+    <div class="direction-arrow">→</div>
+    <div class="direction-title">Where this is going</div>
+    <div class="direction-body">Q4 2026: expanding into long-form skincare content and building a small editorial calendar for anchor brand partners. Brands who partner in the next quarter lock in category presence before the rate card catches up to the reach.</div>
   </div>
 
   <div class="collab-block">
