@@ -464,10 +464,21 @@
     display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
   }
   .post {
-    aspect-ratio: 1; border-radius: 14px; position: relative; overflow: hidden;
+    aspect-ratio: 9 / 16; border-radius: 14px; position: relative; overflow: hidden;
     background-size: cover; background-position: center;
     cursor: pointer; border: none; padding: 0; display: block;
     transition: transform 0.2s, box-shadow 0.2s;
+    background-color: var(--sand);
+  }
+  .post-badge {
+    position: absolute; top: 10px; left: 10px;
+    background: linear-gradient(135deg, var(--gold), #A87B2E);
+    color: #fff; font-size: 9px; font-weight: 800;
+    letter-spacing: 1.5px; padding: 5px 10px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-transform: uppercase;
+    z-index: 2;
   }
   .post:hover { transform: scale(1.02); box-shadow: 0 12px 28px rgba(110,31,58,0.25); }
   .post:hover .post-play { transform: translate(-50%, -50%) scale(1.1); background: var(--wine); }
@@ -1489,24 +1500,25 @@
     <div style="margin-top:14px; font-size:13px; color:var(--muted);">Reels-first strategy · optimized for discovery and non-follower reach</div>
   </div>
 
-  <div class="subhead">Recent Work</div>
-  <div class="subhead-sub">Tap any reel to watch it here.</div>
+  <div class="subhead">Signature Reels</div>
+  <div class="subhead-sub">Her all-time top-performing content. Tap to watch inline.</div>
   <div class="section" style="padding-top:0;">
     <div class="posts-grid">
-      <button type="button" class="post post1" data-reel="https://www.instagram.com/thefaizaglam/reel/DbZeF68A8RU/" aria-label="Watch top reel">
+      <button type="button" class="post post2" data-reel="https://www.instagram.com/thefaizaglam/reel/DbRuPCegsML/" aria-label="Watch POV foundation reel with 3.9M views">
+        <div class="post-badge">TOP VIRAL</div>
         <div class="post-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="post-stats">▶ 53K views</div>
+        <div class="post-stats">▶ 3.9M views</div>
       </button>
-      <button type="button" class="post post2" data-reel="https://www.instagram.com/thefaizaglam/reel/DbRuPCegsML/" aria-label="Watch skincare reel">
+      <button type="button" class="post post1" data-reel="https://www.instagram.com/thefaizaglam/reel/DbZeF68A8RU/" aria-label="Watch mascara reel with 1.2M views">
         <div class="post-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="post-stats">▶ 15K views</div>
+        <div class="post-stats">▶ 1.2M views</div>
       </button>
-      <button type="button" class="post post3" data-reel="https://www.instagram.com/thefaizaglam/reel/DbenRlyABHu/" aria-label="Watch POV reel">
+      <button type="button" class="post post3" data-reel="https://www.instagram.com/thefaizaglam/reel/DbenRlyABHu/" aria-label="Watch foundation and blush reel with 130K views">
         <div class="post-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="post-stats">▶ 8.7K views</div>
+        <div class="post-stats">▶ 130K views</div>
       </button>
     </div>
-    <div style="margin-top:14px; font-size:13px; color:var(--muted); text-align:center;">Top three Reels. Last 30 days. From Instagram Insights.</div>
+    <div style="margin-top:16px; font-size:13px; color:var(--muted); text-align:center; font-style:italic;">Signature formats. Reels that consistently outperform for the modest beauty audience.</div>
   </div>
 
   <div class="reel-modal" id="reelModal" role="dialog" aria-modal="true" aria-hidden="true">
