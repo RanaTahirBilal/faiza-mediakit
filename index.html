@@ -133,6 +133,7 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
   .wrap {
     max-width: 720px;
@@ -142,15 +143,19 @@
     min-height: 100vh;
   }
 
-  /* HERO */
+  /* HERO — breaks out of .wrap max-width to span full viewport */
   .hero {
     position: relative;
-    height: 280px;
+    height: 320px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     background:
-      radial-gradient(circle at 20% 30%, rgba(255,220,200,0.7) 0, transparent 40%),
-      radial-gradient(circle at 70% 60%, rgba(232,180,184,0.8) 0, transparent 45%),
-      radial-gradient(circle at 40% 80%, rgba(184,147,74,0.4) 0, transparent 50%),
-      linear-gradient(135deg, #E8B4B8 0%, #B47581 40%, #6E1F3A 100%);
+      radial-gradient(circle at 15% 30%, rgba(255,220,200,0.7) 0, transparent 35%),
+      radial-gradient(circle at 30% 60%, rgba(232,180,184,0.75) 0, transparent 40%),
+      radial-gradient(circle at 55% 40%, rgba(255,240,225,0.5) 0, transparent 45%),
+      radial-gradient(circle at 75% 65%, rgba(232,180,184,0.65) 0, transparent 40%),
+      radial-gradient(circle at 90% 30%, rgba(184,147,74,0.35) 0, transparent 40%),
+      linear-gradient(120deg, #E8B4B8 0%, #C68A96 35%, #8B3E56 70%, #6E1F3A 100%);
     overflow: hidden;
   }
   .hero::before, .hero::after {
