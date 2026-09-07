@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://thefaizaglam.com/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://thefaizaglam.com/dp.jpg</image:loc>
+      <image:title>Faiza Nadeem — Pakistani-American Hijabi Beauty Creator</image:title>
+      <image:caption>Faiza Nadeem, Pakistani-American hijabi modest beauty content creator based in Long Island, New York.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://thefaizaglam.com/og-image.jpg</image:loc>
+      <image:title>Faiza Nadeem Media Kit — @thefaizaglam</image:title>
+      <image:caption>Official media kit share card for Faiza Nadeem.</image:caption>
+    </image:image>
   </url>
 </urlset>
