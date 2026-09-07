@@ -530,10 +530,13 @@
   }
   .reel-modal[aria-hidden="false"] { display: flex; }
   .reel-modal-inner {
-    background: #fff; border-radius: 20px;
-    max-width: 420px; width: 100%;
-    max-height: 92vh; overflow-y: auto;
+    background: transparent; border-radius: 20px;
+    max-width: 440px; width: 100%;
+    max-height: 92vh; overflow: hidden;
     box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  }
+  .reel-modal-inner iframe {
+    display: block; width: 100%; height: min(720px, 92vh);
   }
   .reel-modal-inner blockquote.instagram-media {
     margin: 0 !important; border: none !important;
@@ -1644,27 +1647,19 @@
 
 </div>
 
-<script async src="https://www.instagram.com/embed.js"></script>
 <script>
 (function(){
   var modal = document.getElementById('reelModal');
   var modalInner = document.getElementById('reelModalInner');
   var closeBtn = document.querySelector('.reel-modal-close');
   function openReel(url){
-    modalInner.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="'+url+'" data-instgrm-version="14" style="background:#FFF;border:0;margin:0;padding:0;max-width:540px;min-width:326px;"></blockquote>';
+    // Extract reel shortcode from URL for iframe embed
+    var m = url.match(/\/reel\/([^\/\?]+)/);
+    var shortcode = m ? m[1] : '';
+    var embedSrc = 'https://www.instagram.com/reel/' + shortcode + '/embed/captioned/';
+    modalInner.innerHTML = '<iframe src="' + embedSrc + '" width="100%" height="720" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen="true" style="border-radius:20px; background:#fff; display:block;"></iframe>';
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
-    // Reload IG embed processor
-    if (window.instgrm && window.instgrm.Embeds) {
-      window.instgrm.Embeds.process();
-    } else {
-      // fallback if IG script blocked or not loaded
-      setTimeout(function(){
-        if (!window.instgrm) {
-          modalInner.innerHTML = '<div class="reel-modal-fallback"><h3>Watch this reel on Instagram</h3><p>Preview couldn\'t load inline. Tap below to view it on Instagram in the same window.</p><a href="'+url+'" target="_blank" rel="noopener">Open Reel</a></div>';
-        }
-      }, 2500);
-    }
   }
   function closeReel(){
     modal.setAttribute('aria-hidden','true');
