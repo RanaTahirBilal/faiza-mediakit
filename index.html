@@ -123,8 +123,9 @@
   body {
     margin: 0;
     background:
-      radial-gradient(ellipse at top left, rgba(232,180,184,0.25), transparent 50%),
-      radial-gradient(ellipse at bottom right, rgba(184,147,74,0.15), transparent 50%),
+      radial-gradient(ellipse 900px 600px at 15% 20%, rgba(232,180,184,0.35), transparent 60%),
+      radial-gradient(ellipse 800px 700px at 85% 50%, rgba(184,147,74,0.14), transparent 55%),
+      radial-gradient(ellipse 700px 500px at 30% 90%, rgba(232,180,184,0.20), transparent 60%),
       var(--cream);
     background-attachment: fixed;
     color: var(--ink);
@@ -138,15 +139,15 @@
   .wrap {
     max-width: 720px;
     margin: 0 auto;
-    background: var(--cream);
-    box-shadow: 0 0 60px rgba(110,31,58,0.08);
+    background: transparent;
     min-height: 100vh;
+    position: relative;
   }
 
   /* HERO — breaks out of .wrap max-width to span full viewport */
   .hero {
     position: relative;
-    height: 320px;
+    height: 340px;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     background:
@@ -157,6 +158,12 @@
       radial-gradient(circle at 90% 30%, rgba(184,147,74,0.35) 0, transparent 40%),
       linear-gradient(120deg, #E8B4B8 0%, #C68A96 35%, #8B3E56 70%, #6E1F3A 100%);
     overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 100px;
+    background: linear-gradient(180deg, transparent, rgba(250,243,239,0.85) 70%, var(--cream) 100%);
+    pointer-events: none;
   }
   .hero::before, .hero::after {
     content: '';
@@ -1033,9 +1040,18 @@
 
   /* COLLABORATION PATHS */
   .collab-block {
-    padding: 50px 24px 30px;
-    background: linear-gradient(180deg, transparent, rgba(232, 180, 184, 0.12));
+    padding: 60px 24px 40px;
+    background: linear-gradient(180deg, transparent 0%, rgba(232, 180, 184, 0.12) 40%, rgba(232, 180, 184, 0.22) 100%);
+    margin: 20px calc(-50vw + 50%) 0;
   }
+  .collab-block .collab-title,
+  .collab-block .collab-sub,
+  .collab-block .collab-grid,
+  .collab-block .collab-note,
+  .collab-block .collab-eyebrow {
+    max-width: 720px; margin-left: auto; margin-right: auto;
+  }
+  .collab-block .collab-grid { display: grid; }
   .collab-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 30px; color: var(--ink); font-style: italic;
@@ -1082,12 +1098,12 @@
   }
   .collab-note a { color: var(--wine); }
 
-  /* FOOTER */
+  /* FOOTER — extends full-width for premium closing */
   .footer {
-    text-align: center; padding: 50px 24px 60px;
+    text-align: center; padding: 60px 24px 70px;
     color: var(--muted); font-size: 14px;
-    background: linear-gradient(180deg, transparent, rgba(232, 180, 184, 0.15));
-    margin-top: 40px;
+    background: linear-gradient(180deg, rgba(232, 180, 184, 0.18), rgba(110, 31, 58, 0.08));
+    margin: 40px calc(-50vw + 50%) 0;
   }
   .footer-title {
     font-family: 'Playfair Display', Georgia, serif;
