@@ -137,11 +137,15 @@
     overflow-x: hidden;
   }
   .wrap {
-    max-width: 720px;
+    max-width: 1080px;
     margin: 0 auto;
     background: transparent;
     min-height: 100vh;
     position: relative;
+  }
+  /* Read-heavy sections stay narrow for line-length comfort */
+  .about-body, .niche-body, .ratio-caption, .headline-sub, .hero-lede {
+    max-width: 640px; margin-left: auto; margin-right: auto;
   }
 
   /* HERO — breaks out of .wrap max-width to span full viewport */
@@ -348,7 +352,7 @@
 
   /* BRAND PARTNERS */
   .brands-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   }
   .brand-card {
     background: var(--card); padding: 26px 20px 22px;
@@ -409,7 +413,7 @@
 
   /* STAT GRID */
   .stats-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
     background: var(--border); border: 1px solid var(--border);
     border-radius: 14px; overflow: hidden;
   }
@@ -730,7 +734,7 @@
     font-weight: 700; text-align: center; margin-bottom: 20px;
   }
   .pitch-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
   }
   .pitch-card { padding: 4px 0; }
   .pitch-num {
@@ -970,7 +974,7 @@
 
   /* OFFER PACKAGES */
   .offer-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   }
   .offer-card {
     background: var(--card); border: 1px solid var(--border);
@@ -1062,7 +1066,7 @@
     margin-bottom: 28px;
   }
   .collab-grid {
-    display: grid; grid-template-columns: 1fr; gap: 14px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
   }
   .collab-card {
     display: block; padding: 24px 22px;
@@ -1129,9 +1133,11 @@
   .footer-meta { margin-top: 28px; opacity: 0.75; font-size: 13px; }
 
   /* TABLET */
-  @media (max-width: 720px) {
-    .wrap { box-shadow: none; }
+  @media (max-width: 900px) {
     .brands-grid, .offer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .pitch-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .collab-grid { grid-template-columns: 1fr; gap: 14px; }
   }
 
   /* MOBILE */
