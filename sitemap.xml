@@ -9,17 +9,15 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://thefaizaglam.com/dp.jpg</image:loc>
-      <image:title>Faiza Nadeem — Beauty and Makeup Content Creator, Long Island NY</image:title>
-      <image:caption>Faiza Nadeem, beauty and makeup content creator based in Long Island, New York.</image:caption>
+      <image:title>Faiza Nadeem, Beauty and Makeup Content Creator, Long Island NY</image:title>
     </image:image>
     <image:image>
       <image:loc>https://thefaizaglam.com/og-image.jpg</image:loc>
-      <image:title>Faiza Nadeem Media Kit — @thefaizaglam</image:title>
-      <image:caption>Official media kit share card for Faiza Nadeem, @thefaizaglam.</image:caption>
+      <image:title>Faiza Nadeem Media Kit, @thefaizaglam</image:title>
     </image:image>
     <video:video>
       <video:thumbnail_loc>https://thefaizaglam.com/dp.jpg</video:thumbnail_loc>
-      <video:title>POV Foundation Application — Faiza Nadeem @thefaizaglam</video:title>
+      <video:title>POV Foundation Application by Faiza Nadeem @thefaizaglam</video:title>
       <video:description>Instagram Reel by Faiza Nadeem showing a POV foundation application. 3.9 million views.</video:description>
       <video:content_loc>https://www.instagram.com/thefaizaglam/reel/DbRuPCegsML/</video:content_loc>
       <video:player_loc>https://www.instagram.com/reel/DbRuPCegsML/embed/captioned/</video:player_loc>
@@ -28,7 +26,7 @@
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://thefaizaglam.com/dp.jpg</video:thumbnail_loc>
-      <video:title>Mascara Tutorial — Faiza Nadeem @thefaizaglam</video:title>
+      <video:title>Mascara Tutorial by Faiza Nadeem @thefaizaglam</video:title>
       <video:description>Instagram Reel by Faiza Nadeem showing a mascara application. 1.2 million views.</video:description>
       <video:content_loc>https://www.instagram.com/thefaizaglam/reel/DbZeF68A8RU/</video:content_loc>
       <video:player_loc>https://www.instagram.com/reel/DbZeF68A8RU/embed/captioned/</video:player_loc>
@@ -37,12 +35,36 @@
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://thefaizaglam.com/dp.jpg</video:thumbnail_loc>
-      <video:title>Foundation and Blush — Faiza Nadeem @thefaizaglam</video:title>
+      <video:title>Foundation and Blush by Faiza Nadeem @thefaizaglam</video:title>
       <video:description>Instagram Reel by Faiza Nadeem showing foundation and blush application. 130 thousand views.</video:description>
       <video:content_loc>https://www.instagram.com/thefaizaglam/reel/DbenRlyABHu/</video:content_loc>
       <video:player_loc>https://www.instagram.com/reel/DbenRlyABHu/embed/captioned/</video:player_loc>
       <video:family_friendly>yes</video:family_friendly>
       <video:view_count>130000</video:view_count>
     </video:video>
+  </url>
+  <url>
+    <loc>https://thefaizaglam.com/blog/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thefaizaglam.com/blog/discovery-algorithm-creators-instagram-beauty/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thefaizaglam.com/blog/modest-beauty-instagram-new-york/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thefaizaglam.com/blog/pakistani-american-beauty-creators-new-york/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
