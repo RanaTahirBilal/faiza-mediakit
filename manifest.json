@@ -1,0 +1,14 @@
+{
+  "name": "Faiza Nadeem — Beauty & Makeup Content Creator",
+  "short_name": "The Faiza Glam",
+  "description": "Faiza Nadeem is a beauty and makeup content creator based in Long Island, New York. @thefaizaglam.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF3EF",
+  "theme_color": "#6E1F3A",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
